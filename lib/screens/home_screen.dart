@@ -30,18 +30,33 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: ListView(
         children: <Widget>[
-          TextField(
-              decoration: InputDecoration(
-            border: OutlineInputBorder(
+          Padding(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+                decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+              fillColor: Colors.white,
+              filled: true,
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  borderSide: BorderSide(width: .9)),
+              enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
-                borderSide: BorderSide(width: .9)),
-            hintText: "Search Food or Restuarant",
-            prefixIcon: Icon(
-              Icons.search,
-              color: Colors.grey,
-              size: 30.0,
-            ),
-          )),
+                borderSide: BorderSide(
+                    width: .9, color: Theme.of(context).primaryColor),
+              ),
+              hintText: "Search Food or Restuarant",
+              prefixIcon: Icon(
+                Icons.search,
+                color: Colors.grey,
+                size: 30.0,
+              ),
+              suffixIcon: IconButton(
+                  onPressed: () {},
+                  color: Colors.grey,
+                  icon: Icon(Icons.clear)),
+            )),
+          )
         ],
       ),
     );

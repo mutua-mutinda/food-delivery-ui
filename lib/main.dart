@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Food Delivery',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.grey[50],
+        primaryColor: Colors.deepOrange,
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.deepOrange,
         ).copyWith(
