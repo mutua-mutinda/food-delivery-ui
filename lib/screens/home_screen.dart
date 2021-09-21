@@ -3,6 +3,7 @@ import 'package:food_delivery/data/data.dart';
 import 'package:food_delivery/models/restaurant.dart';
 import 'package:food_delivery/widgets/rating_stars.dart';
 import 'package:food_delivery/widgets/recent_orders.dart';
+import 'package:food_delivery/widgets/restaurant_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,11 +33,14 @@ class _HomeScreenState extends State<HomeScreen> {
               children: <Widget>[
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15.0),
-                  child: Image(
-                    height: 100.0,
-                    width: 100.0,
-                    image: AssetImage(restaurant.imageUrl.toString()),
-                    fit: BoxFit.cover,
+                  child: Hero(
+                    tag: restaurant.imageUrl.toString(),
+                    child: Image(
+                      height: 100.0,
+                      width: 100.0,
+                      image: AssetImage(restaurant.imageUrl.toString()),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Container(
